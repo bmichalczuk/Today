@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import {authObserver} from "../firebase/utils";
 
+
 const useUser = () => {
     const [user, setUser] = useState<any>()
 
@@ -13,10 +14,9 @@ const useUser = () => {
     })
 
     useEffect(() => {
-       const unsubscribe =  observer()
-       console.log("ifired Once");
+       const unsubscribe =  observer();
        return unsubscribe;
-    }, [user]);
+    }, [user, observer]);
     return user
 };
 
