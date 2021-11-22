@@ -14,9 +14,10 @@ const useUser = () => {
     })
 
     useEffect(() => {
-       const unsubscribe =  observer();
+       const unsubscribe = observer();
        return unsubscribe;
     }, [user, observer]);
+
     return user
 };
 

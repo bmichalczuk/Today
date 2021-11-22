@@ -8,7 +8,10 @@ export const registerWithEmail = async (email: string, password: string) => crea
 
 export const loginWithEmailAndPassword = async (email: string, password: string) => await signInWithEmailAndPassword(auth, email, password);
 
-export const loginWithGoogle = async () => await signInWithPopup(auth, googleProvider);
+export const loginWithGoogle = async () => await signInWithPopup(auth, googleProvider).catch(err => {
+  console.log(err);
+  return null;
+});
 
 export const logOut = async () => signOut(auth);
 
