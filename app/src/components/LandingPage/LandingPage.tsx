@@ -1,8 +1,9 @@
-import React, {useContext} from "react";
+import React, {ReactNode, useContext} from "react";
 import { Navigate } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
+import styled from "styled-components";
 
-const LandingPage: React.FC = ({children}) => {
+const LandingPage = ({className}: {className?: string}) => {
     const user = useContext(UserContext)
 
     
@@ -10,10 +11,17 @@ const LandingPage: React.FC = ({children}) => {
         return <Navigate to="/dashboard" />
     }
     return (
-        <div>
+        <div className={className}>
+            
             <h1>Welcome to apppp!!!</h1>
         </div>
     )
 };
 
-export default LandingPage;
+const StyledLandingPage = styled(LandingPage)`
+    color: ${props => props.theme.colors.tertiary};
+    background: red;
+
+`;
+
+export default StyledLandingPage;
