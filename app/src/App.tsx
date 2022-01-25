@@ -7,7 +7,8 @@ import {UserContext} from "./contexts/UserContext";
 import {Provider} from "react-redux";
 import store from "./redux/store";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import ThemeStyles from "./styled-commponents/Theme";
+import ThemeStyles from "./styled-components/Theme";
+import GlobalStyles from './styled-components/GlobalStyles';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <ThemeStyles>
+      <GlobalStyles />
       <div className="App">
         <header>
         {!user 
