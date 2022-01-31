@@ -21,11 +21,11 @@ const theme = {
         big: "1280px",
         large: "1680px"
     }, space: {
-        xs: ".2em",
-        s: ".5em",
-        m: "1em",
-        l: "1.5em",
-        xl: "2.5em"
+        xs: ".5em",
+        s: "1em",
+        m: "1.5em",
+        l: "3em",
+        xl: "5em"
     }
 
 };

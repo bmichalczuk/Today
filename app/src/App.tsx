@@ -9,7 +9,7 @@ import store from "./redux/store";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import ThemeStyles from "./styled-components/Theme";
 import GlobalStyles from './styled-components/GlobalStyles';
-
+import AppHeader from "./components/AppHeader";
 function App() {
 
   const user = useContext(UserContext);
@@ -19,15 +19,9 @@ function App() {
     <ThemeStyles>
       <GlobalStyles />
       <div className="App">
-        <header>
-        {!user 
-            ? <button onClick={loginWithGoogle}>login</button>
-            : <button onClick={logOut}>logout</button>
-          }
-        </header>
-        
         <Provider store={store}>
           <Router>
+            <AppHeader />
             <Routes>
               <Route  path="/" element={<LandingPage />} />
               <Route path="dashboard" element={<Dashboard />} />

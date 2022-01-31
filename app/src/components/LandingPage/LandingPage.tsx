@@ -18,10 +18,5 @@ const LandingPage = ({className}: {className?: string}) => {
     )
 };
 
-const StyledLandingPage = styled(LandingPage)`
-    background: ${({theme: {colors}}) => colors.fourth};
-    padding: ${(props) => props.theme.space.l}
-    
-`;
 
-export default StyledLandingPage;
+export default LandingPage;
