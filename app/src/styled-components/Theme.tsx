@@ -26,6 +26,10 @@ const theme = {
         m: "1.5em",
         l: "3em",
         xl: "5em"
+    }, fontSize: {
+        normal: "1rem",
+        h2: "1.5rem",
+        h1: "2rem",
     }
 
 };

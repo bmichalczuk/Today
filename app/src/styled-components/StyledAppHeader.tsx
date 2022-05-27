@@ -8,7 +8,8 @@ const StyledAppHeader = styled.header`
     border: 3px solid blue;
     background: ${({theme: {colors}}) => colors.fourth};
     color: ${({theme:{colors}}) => colors.primary};
-    padding: ${({theme: {space: {xl}}}) => `0 ${xl}`};
+    padding: ${({theme: {space: {xs, xl}}}) => `${xs} ${xl}`};
+   
 `;
 
 export default StyledAppHeader;

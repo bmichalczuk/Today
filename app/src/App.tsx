@@ -10,6 +10,8 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import ThemeStyles from "./styled-components/Theme";
 import GlobalStyles from './styled-components/GlobalStyles';
 import AppHeader from "./components/AppHeader";
+import LoginPage from './components/LoginPage';
+
 function App() {
 
   const user = useContext(UserContext);
@@ -25,6 +27,8 @@ function App() {
             <Routes>
               <Route  path="/" element={<LandingPage />} />
               <Route path="dashboard" element={<Dashboard />} />
+              
+              <Route path="login" element={<LoginPage />} />
             </Routes>
           
 
