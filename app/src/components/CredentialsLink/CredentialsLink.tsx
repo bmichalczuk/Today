@@ -6,7 +6,9 @@ import LogOutIcon from "./log-out.svg";
 
 const CredentialsLink = ({user}: any) => {
     return (
-        user ? <LogOutButton onClick={logOut}><img src={LogOutIcon} alt="" />Log out</LogOutButton> : <LogOutButton as={Link} to="/login"><img src={LogInIcon} alt="" />Log in</LogOutButton>
+        user 
+        ? <LogOutButton title="Log out user" onClick={logOut}><img src={LogOutIcon} alt="" />Log out</LogOutButton> 
+        : <LogOutButton title="Go to log in page" as={Link} to="/login"><img src={LogInIcon} alt="" />Log in</LogOutButton>
     )
 }
 
