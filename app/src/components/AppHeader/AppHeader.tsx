@@ -6,6 +6,7 @@ import {logOut } from "../../firebase/utils";
 import StyledAppHeader from "../../styled-components/StyledAppHeader";
 import AppHeading from "../../styled-components/AppHeading";
 import AppLogo from "../AppLogo/AppLogo";
+import CredentialsLink from "../CredentialsLink/CredentialsLink";
 
 const AppHeader = () => {
     const user = useContext(UserContext);
@@ -13,7 +14,7 @@ const AppHeader = () => {
     return (
         <StyledAppHeader>
             <AppHeading><Link to={user ? "/dashboard" : "/"}><AppLogo />Today</Link></AppHeading>
-            {user ? <button onClick={logOut}>logout</button> : <Link to="/login">Login</Link> }
+            <CredentialsLink user={user} />
         </StyledAppHeader>
 
     );

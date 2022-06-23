@@ -5,7 +5,6 @@ const StyledAppHeader = styled.header`
     font-size: 2rem;
     flex-direction: row;
     justify-content: space-between;
-    border: 3px solid blue;
     background: ${({theme: {colors}}) => colors.fourth};
     color: ${({theme:{colors}}) => colors.primary};
     padding: ${({theme: {space: {xs, xl}}}) => `${xs} ${xl}`};
