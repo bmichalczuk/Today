@@ -2,7 +2,6 @@ import React from "react";
 
 import { loginWithGoogle } from "../firebase/utils";
 
-
 const LoginPage = () => {
     return (
         <div>

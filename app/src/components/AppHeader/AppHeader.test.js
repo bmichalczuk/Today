@@ -18,7 +18,7 @@ describe('AppHeader', () => {
       });
 
       it(`Renders link to login page`, () => {
-        expect(screen.getByText("Login")).toBeInTheDocument();
+        expect(screen.getByText("Log in")).toBeInTheDocument();
       });
 
     
